@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { Layout, JobCard } from '../components';
 import withApollo from '../apollo/apollo';
 import { useQuery, gql } from '@apollo/client';
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
 const JOBS_QUERY = gql`
     {
@@ -32,13 +33,17 @@ const JobBoard: NextPage = () => {
 
     return (
         <Layout title="TKO-äly">
-            <div className="">
-                {data?.jobs.map(({ id, ...rest }: Job) => (
-                    <div className="p-2">
-                        <JobCard key={id} {...rest} />
+            <AnimateSharedLayout type="crossfade">
+                <AnimatePresence>
+                    <div className="">
+                        {data?.jobs.map(({ id, ...rest }: Job) => (
+                            <div className="p-2">
+                                <JobCard key={id} {...rest} />
+                            </div>
+                        )) || <h1>Loading</h1>}
                     </div>
-                )) || <h1>Loading</h1>}
-            </div>
+                </AnimatePresence>
+            </AnimateSharedLayout>
         </Layout>
     );
 };
