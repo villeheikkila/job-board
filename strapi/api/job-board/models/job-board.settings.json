@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "job_board",
+  "info": {
+    "name": "job advertisement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "headers": {
+      "type": "string"
+    },
+    "Opens": {
+      "type": "date"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "company": {
+      "model": "company"
+    }
+  }
+}
