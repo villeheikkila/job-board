@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
 import { Layout, JobCard } from '../components';
-import withApollo from '../apollo/apollo';
 import { useQuery, gql } from '@apollo/client';
 import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
@@ -10,6 +9,7 @@ const JOBS_QUERY = gql`
             id
             title
             description
+            synopsis
             company {
                 name
             }
@@ -20,6 +20,7 @@ const JOBS_QUERY = gql`
 interface Job {
     id: string;
     description: string;
+    synopsis: string;
     title: string;
     company: {
         name: string;
@@ -48,4 +49,4 @@ const JobBoard: NextPage = () => {
     );
 };
 
-export default withApollo(JobBoard);
+export default JobBoard;

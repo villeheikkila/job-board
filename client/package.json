@@ -1,7 +1,7 @@
 {
     "name": "tko-website-new",
     "version": "1.0.0",
-    "description": "A new website for TKO-äly ry",
+    "description": "A new job board for TKO-äly ry",
     "repository": "",
     "main": "index.js",
     "scripts": {
@@ -51,17 +51,18 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
-        "@typescript-eslint/eslint-plugin": "^2.27.0",
         "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
         "@types/node": "^13.11.1",
         "@types/react": "^16.9.34",
         "@types/react-dom": "^16.9.6",
+        "@typescript-eslint/eslint-plugin": "^2.27.0",
         "babel-loader": "^8.1.0",
         "babel-plugin-macros": "^2.8.0",
         "babel-plugin-module-resolver": "^4.0.0",
         "dotenv": "^8.2.0",
         "husky": "^4.2.5",
         "lint-staged": "^10.1.3",
+        "postcss-nesting": "^7.0.1",
         "prettier": "^2.0.4",
         "react-test-renderer": "^16.13.1",
         "tailwind.macro": "^1.0.0-alpha.10",

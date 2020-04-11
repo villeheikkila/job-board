@@ -546,6 +546,9 @@
           },
           "title": {
             "type": "string"
+          },
+          "synopsis": {
+            "type": "string"
           }
         }
       },
@@ -558,6 +561,9 @@
             "type": "string"
           },
           "title": {
+            "type": "string"
+          },
+          "synopsis": {
             "type": "string"
           }
         }

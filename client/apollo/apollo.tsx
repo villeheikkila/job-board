@@ -21,3 +21,14 @@ export default withApollo(
         },
     },
 );
+
+// in lib/preloadGraphqlQuery
+export const preloadGraphqlQuery = async (apolloClient, options) => {
+    if (typeof window !== 'undefined') {
+        try {
+            await apolloClient.query(options);
+        } catch (e) {
+            // noop
+        }
+    }
+};

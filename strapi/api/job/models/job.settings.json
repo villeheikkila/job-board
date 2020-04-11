@@ -18,6 +18,9 @@
     },
     "title": {
       "type": "string"
+    },
+    "synopsis": {
+      "type": "text"
     }
   }
 }
